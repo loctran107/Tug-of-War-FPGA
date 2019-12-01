@@ -1,0 +1,6 @@
+module centerLight(clk, reset, L, R, NL, NR, lightOn);
+
+	input logic L, R, NL, NR, clk;
+	output logic lightOn;
+	
+	

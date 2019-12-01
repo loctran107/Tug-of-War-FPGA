@@ -1,0 +1,9 @@
+module fullAdder(A, B, Cin, sum, Cout);
+
+	input logic A, B, Cin;
+	output logic sum, Cout;
+	
+	assign sum = A ^ B ^ C;
+	assign Cout = A&B | Cin & (A^B);
+
+endmodule

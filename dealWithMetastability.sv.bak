@@ -1,0 +1,18 @@
+module dealWithMetastability(clk, reset, Din, Qout);
+	input logic Din;
+	input logic reset, clk;
+	output logic Qout;
+	logic temp;
+	
+	
+	//Deal with metastability
+	always_ff @(posedge clk)
+	
+		begin if (if reset)
+			Qout <= 0;
+		else begin
+			temp <= Din;
+			Qout <= temp;
+		end
+	end
+endmodule
